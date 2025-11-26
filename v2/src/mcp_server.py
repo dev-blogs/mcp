@@ -1,4 +1,3 @@
-from typing import List, Dict
 from fastmcp import FastMCP
 from google.cloud import bigquery
 
@@ -16,8 +15,8 @@ def test(sql: str) -> str:
     return f"test, {sql}!"
     
 
-@mcp.tool("list_users")
-def list_users() -> List[Dict]:
+@mcp.tool()
+def list_users() -> list[dict]:
     query = f"SELECT id, name, email FROM `{TABLE}` LIMIT 10"
     rows = client.query(query).result()
 
@@ -27,7 +26,7 @@ def list_users() -> List[Dict]:
     ]
 
 
-@mcp.resource()
+@mcp.resource("db://schema")
 def schema() -> str:
     """Return the database schema."""
     cur.execute("SELECT sql FROM sqlite_master WHERE type='table'")
