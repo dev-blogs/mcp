@@ -1,0 +1,8 @@
+fastapi
+fastmcp
+uvicorn
+mcp
+sqlalchemy
+oracledb
+pydantic
+google-cloud-bigquery
