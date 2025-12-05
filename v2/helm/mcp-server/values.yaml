@@ -5,6 +5,13 @@ image:
   tag: "v2.1"
   pullPolicy: Always
 
+Namespace: default
+
+serviceAccount:
+  name: mcp-sa
+  annotations:
+    iam.gke.io/gcp-service-account: service-account-7@mig-test-project-456610.iam.gserviceaccount.com
+
 service:
   type: LoadBalancer
   port: 80
