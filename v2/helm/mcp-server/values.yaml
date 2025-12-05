@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: devblogs1/mcp-server
+  tag: "v2.1"
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8000
+
+resources:
+  requests:
+    cpu: "0.1"
+    memory: "128Mi"
+  limits:
+    cpu: "0.25"
+    memory: "256Mi"
