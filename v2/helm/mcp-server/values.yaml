@@ -7,10 +7,11 @@ image:
 
 Namespace: default
 
+k8sServiceAccount:
+  name: mcp-service-account
+
 serviceAccount:
-  name: mcp-sa
-  annotations:
-    iam.gke.io/gcp-service-account: service-account-7@mig-test-project-456610.iam.gserviceaccount.com
+  name: 
 
 service:
   type: LoadBalancer
