@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: devblogs1/mcp-server
-  tag: "v2.1"
+  tag: "v2.5"
   pullPolicy: Always
 
 Namespace: default
