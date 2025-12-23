@@ -1,7 +1,7 @@
 from fastmcp import Client
 import asyncio
 
-client = Client("http://34.46.54.254/mcp")
+client = Client("http://34.172.4.201:8000/mcp")
 #client = Client("http://localhost:8000/mcp")
 
 async def main():

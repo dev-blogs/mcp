@@ -1,7 +1,13 @@
 from fastmcp import Client
+import httpx
 import asyncio
 
-client = Client("http://34.68.113.56:8000/mcp", auth="token-from-idp")
+
+transport = httpx.AsyncHTTPTransport(verify=False)
+http_client = httpx.AsyncClient(transport=transport)
+
+client = Client("https://34.13.120.204/mcp", auth="token-from-idp")
+
 
 async def main():
     async with client:
